@@ -4,6 +4,10 @@ declare(strict_types = 1);
 
 namespace Src\Mooc\Courses\Infraestructure\Persistense;
 
+use Src\Mooc\Courses\Domain\Course;
+use Src\Mooc\Courses\Domain\CourseDuration;
+use Src\Mooc\Courses\Domain\CourseId;
+use Src\Mooc\Courses\Domain\CourseName;
 use Src\Mooc\Courses\Domain\CourseRepository;
 use Src\Mooc\Courses\Infraestructure\Persistense\Eloquent\CourseEloquentModel;
 
@@ -12,8 +16,8 @@ final class EloquentCourseRepository implements CourseRepository
     public function save(Course $course): void
     {
         $model = new CourseEloquentModel();
-        $model->id = $course->id()->value();
-        $model->name = $course->name()->value();
+        $model->id       = $course->id()->value();
+        $model->name     = $course->name()->value();
         $model->duration = $course->duration()->value();
 
         $model->save();

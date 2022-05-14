@@ -2,11 +2,13 @@
 
 declare(strict_types = 1);
 
-namespace Src\Mooc\Courses\Create;
+namespace Src\Mooc\Courses\Domain;
 
-use Src\Shared\Domain\Aggregate\AggregateRoot;
+use Src\Mooc\Courses\Domain\CourseDuration;
+use Src\Mooc\Courses\Domain\CourseId;
+use Src\Mooc\Courses\Domain\CourseName;
 
-final class Course extends AggregateRoot
+final class Course
 {
     private $id;
     private $name;
@@ -22,8 +24,6 @@ final class Course extends AggregateRoot
     public static function create(CourseId $id, CourseName $name, CourseDuration $duration): self
     {
         $course = new Self($id, $name, $duration);
-
-        $course->record(new CourseCreatedDomainEvent($id->value(), $name->value(), $duration->value()));
         
         return $course;
     }
