@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Src\Mooc\Courses\Infraestructure\Persistense\Eloquent;
+namespace CodelyTv\Mooc\Courses\Infraestructure\Persistense\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 

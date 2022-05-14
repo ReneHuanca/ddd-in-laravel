@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Src\Mooc\Courses\Domain;
+namespace CodelyTv\Mooc\Courses\Domain;
 
 final class CourseId
 {

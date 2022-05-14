@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace Src\Mooc\Courses\Domain;
+namespace CodelyTv\Mooc\Courses\Domain;
 
-use Src\Mooc\Courses\Domain\CourseDuration;
-use Src\Mooc\Courses\Domain\CourseId;
-use Src\Mooc\Courses\Domain\CourseName;
+use CodelyTv\Mooc\Courses\Domain\CourseDuration;
+use CodelyTv\Mooc\Courses\Domain\CourseId;
+use CodelyTv\Mooc\Courses\Domain\CourseName;
 
 final class Course
 {

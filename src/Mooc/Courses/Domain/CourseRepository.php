@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace Src\Mooc\Courses\Domain;
+namespace CodelyTv\Mooc\Courses\Domain;
 
-use Src\Mooc\Courses\Domain\Course;
+use CodelyTv\Mooc\Courses\Domain\Course;
 
 interface CourseRepository
 {

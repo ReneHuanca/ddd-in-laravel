@@ -2,14 +2,14 @@
 
 declare(strict_types = 1);
 
-namespace Src\Mooc\Courses\Aplication\Create;
+namespace CodelyTv\Mooc\Courses\Aplication\Create;
 
 use App\Http\Requests\CreateCourseRequest;
-use Src\Mooc\Courses\Domain\Course;
-use Src\Mooc\Courses\Domain\CourseDuration;
-use Src\Mooc\Courses\Domain\CourseId;
-use Src\Mooc\Courses\Domain\CourseName;
-use Src\Mooc\Courses\Domain\CourseRepository;
+use CodelyTv\Mooc\Courses\Domain\Course;
+use CodelyTv\Mooc\Courses\Domain\CourseDuration;
+use CodelyTv\Mooc\Courses\Domain\CourseId;
+use CodelyTv\Mooc\Courses\Domain\CourseName;
+use CodelyTv\Mooc\Courses\Domain\CourseRepository;
 
 final class CourseCreator
 {
@@ -22,7 +22,7 @@ final class CourseCreator
 
     public function __invoke(CreateCourseRequest $request)
     {
-        $id       = new CourseId("4");
+        $id       = new CourseId("3");
         $name     = new CourseName($request->name);
         $duration = new CourseDuration($request->duration);
 
