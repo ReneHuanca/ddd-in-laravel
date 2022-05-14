@@ -10,8 +10,12 @@ use Src\Mooc\Courses\Infraestructure\Persistense\EloquentCourseRepository;
 
 class CourseController extends Controller
 {
+    private $repository;
 
-
+    public function __construct(EloquentCourseRepository $repository)
+    {
+        $this->repository = $repository;
+    }
 
     public function create()
     {
@@ -22,8 +26,7 @@ class CourseController extends Controller
 
     public function store(CreateCourseRequest $request)
     {
-        $repository = new EloquentCourseRepository();
-        $courseCreator = new CourseCreator($repository);
+        $courseCreator = new CourseCreator($this->repository);
         $courseCreator->__invoke($request);
 
         return back();

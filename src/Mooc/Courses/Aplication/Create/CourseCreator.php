@@ -22,7 +22,7 @@ final class CourseCreator
 
     public function __invoke(CreateCourseRequest $request)
     {
-        $id       = new CourseId("2");
+        $id       = new CourseId("4");
         $name     = new CourseName($request->name);
         $duration = new CourseDuration($request->duration);
 
