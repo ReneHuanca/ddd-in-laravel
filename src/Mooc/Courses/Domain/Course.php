@@ -14,7 +14,7 @@ final class Course
     private $name;
     private $duration;
 
-    public function __construct(CourseId $id, CourseName $name, CourseDuration $duration)
+    public function __construct(?CourseId $id, CourseName $name, CourseDuration $duration)
     {
         $this->id = $id;
         $this->name = $name;
@@ -28,7 +28,14 @@ final class Course
         return $course;
     }
 
-    public function id(): CourseId
+    public static function register(CourseName $name, CourseDuration $duration): self
+    {
+        $course = new Self(null, $name, $duration);
+        
+        return $course;
+    }
+
+    public function id(): ?CourseId
     {
         return $this->id;
     }

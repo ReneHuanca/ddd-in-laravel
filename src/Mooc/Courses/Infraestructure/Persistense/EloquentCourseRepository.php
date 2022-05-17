@@ -16,7 +16,6 @@ final class EloquentCourseRepository implements CourseRepository
     public function save(Course $course): void
     {
         $model = new CourseEloquentModel();
-        $model->id       = $course->id()->value();
         $model->name     = $course->name()->value();
         $model->duration = $course->duration()->value();
 
