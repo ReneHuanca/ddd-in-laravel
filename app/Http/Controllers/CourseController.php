@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateCourseRequest;
 use CodelyTv\Mooc\Courses\Aplication\Create\CourseCreator;
+use CodelyTv\Mooc\Courses\Domain\CourseRepository;
 use CodelyTv\Mooc\Courses\Infraestructure\Persistense\Eloquent\CourseEloquentModel;
-use CodelyTv\Mooc\Courses\Infraestructure\Persistense\EloquentCourseRepository;
 
 class CourseController extends Controller
 {
     private $repository;
 
-    public function __construct(EloquentCourseRepository $repository)
+    public function __construct(CourseRepository $repository)
     {
         $this->repository = $repository;
     }
