@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('courses.create');
 });
 
 Route::get('/courses/create', [CourseController::class, 'create'])->name('courses.create');
