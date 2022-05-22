@@ -38,7 +38,7 @@ php artisan serve
 
 ### Project estructure
 
-In this repositoru we can see that the current structure and the changes.
+In this repository we can see that the current structure and the changes.
 
 ```scala
 app
@@ -62,7 +62,7 @@ src
         |   |-- Create // Actions
         |   |   `-- CourseCreator.php
         |-- Domain
-        |   |-- Course.php // Entitie
+        |   |-- Course.php // Entity
         |   |-- CourseDuration.php // Value Object
         |   |-- CourseId.php
         |   |-- CourseName.php
